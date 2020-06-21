@@ -1,9 +1,11 @@
 import speedtest
 import datetime as dt
 import csv
+import os
 
 
-results_file = 'speedtest_results.csv'
+results_path = os.path.dirname(os.path.abspath(__file__))
+results_file = os.path.join(results_path, 'speedtest_results.csv')
 
 
 def run_speedtest():
